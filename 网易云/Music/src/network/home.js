@@ -9,7 +9,7 @@ export function getBanners(){
 
 export function getMusicList(limit){
     return request({
-        url:'/personalized?',
+        url:'/personalized?limit='+limit,
         method:'get'
     })
 }

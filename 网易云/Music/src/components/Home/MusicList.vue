@@ -11,7 +11,7 @@ const state = reactive({
 })
 
 onMounted(()=>{
-  getMusicList().then((res)=>{
+  getMusicList(9).then((res)=>{
     state.musicList = res.result
   })
 })
@@ -37,6 +37,7 @@ function toItemMusic(id){
     }
   })
 }
+
 </script>
 
 <template>
@@ -46,9 +47,9 @@ function toItemMusic(id){
       <span>查看更多</span>
     </div>
     <div class="listMain">
-      <van-swipe :loop="false" :width="110" :show-indicators="false" class="list">
-        <van-swipe-item v-for="i in state.musicList" :key="i.id" class="listItem" @click="toItemMusic(i.id)">
-          <img :src="i.picUrl" alt="">
+      <van-swipe width="140" :loop="false" :show-indicators="false" class="list">
+        <van-swipe-item style="width: 2.3rem" v-for="i in state.musicList" :key="i.id" class="listItem" @click="toItemMusic(i.id)">
+          <img style="width: 2.1rem" :src="i.picUrl" alt="">
           <span>{{i.name}}</span>
           <div class="playCount">
             <svg class="icon" aria-hidden="true">
@@ -109,7 +110,7 @@ function toItemMusic(id){
   width: 100%;
 }
 .listMain .listItem{
-  /*width: 110px;*/
+  width: 110px;
   /*box-sizing: border-box;*/
   position: relative;
 
@@ -142,8 +143,8 @@ function toItemMusic(id){
   line-height: 0.25rem;
 }
 .listMain .listItem img{
-  width: 100px;
-  border-radius: 10px;
+  width: 1rem;
+  border-radius: 0.1rem;
   /*box-shadow: 10px 10px 5px #888888;*/
 }
 </style>

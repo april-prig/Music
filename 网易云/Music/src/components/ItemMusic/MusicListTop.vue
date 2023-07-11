@@ -1,6 +1,11 @@
 <script setup>
+import {onMounted} from "vue";
+import store from "@/store";
 
 const props = defineProps(['playlist'])
+
+
+
 
 function changeCount(num){
   if (num>=10000000){
