@@ -18,6 +18,9 @@ function changeCount(num){
     return num = 0
   }
 }
+
+console.log('hello')
+
 </script>
 
 <template>
