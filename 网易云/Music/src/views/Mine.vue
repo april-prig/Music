@@ -1,10 +1,13 @@
 <template>
-  <h2>我的</h2>
+  <TopNav></TopNav>
 </template>
 
 <script>
+import TopNav from "@/components/Home/TopNav.vue";
+
 export default {
-  name: "Mine"
+  name: "Mine",
+  components: {TopNav}
 }
 </script>
 

@@ -18,6 +18,11 @@ const routes = [
     path:'/ItemMusic',
     name: 'ItemMusic',
     component: ItemMusic
+  },
+  {
+    path: '/Mine',
+    name: 'Mine',
+    component: Mine
   }
 ]
 const router = createRouter({

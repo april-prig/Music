@@ -19,8 +19,6 @@ function changeCount(num){
   }
 }
 
-console.log('hello')
-
 </script>
 
 <template>

@@ -19,7 +19,7 @@
     <div class="list">
       <div class="left">
         <ul>
-          <li v-for="(i,index) in props.musiclist.songs" @click="updatePlayList()">
+          <li v-for="(i,index) in props.musiclist.songs" @click="updatePlayList(index)">
             <span class="Sequences">{{index+1}}</span>
             <div class="musicInfo">
               <span class="title">{{i.name}}</span>
@@ -36,15 +36,17 @@
 
 <script setup>
 import store from "@/store";
-import {onMounted} from "vue";
+import {ref} from "vue";
 
 const props = defineProps({
   musiclist:{},
 })
 
-function updatePlayList(){
+function updatePlayList(index){
   store.commit('updatePlayList',props.musiclist.songs)
+  store.commit('updatePlayListIndex',index)
 }
+
 
 </script>
 
