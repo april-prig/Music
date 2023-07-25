@@ -11,6 +11,8 @@ function toDiscover(){
   router.push('/')
 }
 
+
+
 </script>
 
 <template>

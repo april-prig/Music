@@ -19,13 +19,16 @@
       </svg>
     </div>
     <audio ref="audio" :src='`https://music.163.com/song/media/outer/url?id=${store.state.playlist[store.state.playListIndex].id}.mp3`'></audio>
-    <van-popup v-model:show="store.state.detailShow" :position="'bottom'" :style="{ width:'100%',height:'100%'}">内容</van-popup>
+    <van-popup v-model:show="store.state.detailShow" :position="'bottom'" :style="{ width:'100%',height:'100%'}">
+      <MusicDetail></MusicDetail>
+    </van-popup>
   </div>
 </template>
 
 <script setup>
 import {mapState, useStore} from "vuex";
 import {ref, watch, watchEffect} from 'vue'
+import MusicDetail from "@/components/ItemMusic/MusicDetail.vue";
 
 const store = useStore()
 
@@ -63,6 +66,8 @@ watch(
 function showDetail(){
   store.state.detailShow = true
 }
+
+
 </script>
 
 <style scoped>

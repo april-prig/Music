@@ -36,6 +36,7 @@
 
 <script setup>
 import store from "@/store";
+import {showToast} from "vant";
 import {ref} from "vue";
 
 const props = defineProps({
@@ -90,7 +91,6 @@ function updatePlayList(index){
   display: flex;
   align-items: baseline;
   width: 100%;
-
   height: 15px;
 }
 .list{
@@ -100,6 +100,11 @@ function updatePlayList(index){
   display: flex;
   justify-content: space-around;
   font-size: 0.3rem;
+}
+@media screen and (min-height:668px){
+  .list{
+    height: 55vh;
+  }
 }
 .list .left{
   width: 95%;

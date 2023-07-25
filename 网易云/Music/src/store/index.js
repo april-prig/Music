@@ -6,14 +6,15 @@ export default createStore({
             al: {
                 id: 494205,
                 pic: 5654788301709824,
-                picUrl: "https://p1.music.126.net/QnFSKGqltSSQ1PAO3z44dg==/5680077069158217.jpg"
+                picUrl: "https://p1.music.126.net/jnQSYEmXHNj0FkN3sAid6w==/3310629511337042.jpg"
             },
-            id: 4944428,
-            name: "“鉄腕アトム”オリジナル サウンド•トラック",
+            id: 28381611,
+            name: "“北方的女王(demo)",
+            ar:[]
         }],
         playListIndex: 0,
         showAudio: true,
-        detailShow:false
+        detailShow:false,
     },
     mutations: {
         showAudio(state) {
@@ -24,7 +25,7 @@ export default createStore({
         },
         updatePlayListIndex(state,index){
             state.playListIndex = index
-        }
+        },
     }
     ,
     actions: {}

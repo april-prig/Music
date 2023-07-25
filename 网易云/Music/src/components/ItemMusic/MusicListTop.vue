@@ -126,6 +126,7 @@ function changeCount(num){
 }
 .main{
   width: 100%;
+  /*height: 290px;*/
   padding: 0.3rem;
   margin-top: 0.1rem;
   color: #fff;
